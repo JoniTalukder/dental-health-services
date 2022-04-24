@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h2>Welcome Independent Service Provide</h2>
+      <h2>Dentist service provider </h2>
+      <p>Rename</p>
     </div>
   );
 }
