@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
+        "name": "Dental Filling",
         "price": "300",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://ibb.co/NF2RvRM"
+        "img": "https://i.ibb.co/D5PMSFH/dental-filling.png"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
+        "name": "Dental Implant",
         "price": "100",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://ibb.co/SPfbDNP"
+        "img": "https://i.ibb.co/CzYrfVV/Dental-implant.png"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
+        "name": "Regular-Checkup",
         "price": "150",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://ibb.co/mR8kgCp"
+        "img": "https://i.ibb.co/CsygvDP/regular-checkup.png"
     }
 ]
