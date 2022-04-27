@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import useData from '../../../CustomHook/useData';
 import Service from '../Service/Service';
 import './Services.css';
 
 const Services = () => {
 
-    const [services, SetServices] = useState([]);
-
-    useEffect(() => {
-        fetch('services.json')
-            .then(res => res.json())
-            .then(data => SetServices(data));
-    }, [])
+    const [services, setServices] = useData();
 
     return (
-        <div className='container'>
+        <div id='services' className='container'>
             <h2 className='text-info text-center text-uppercase mt-5'>Our Services</h2>
             <div className='row'>
                 {

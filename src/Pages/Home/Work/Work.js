@@ -4,7 +4,7 @@ const Work = ({ work }) => {
     const { img } = work;
     return (
         <div className='g-3 col-sm-12 col-md-6 col-lg-4'>
-            <img src={img} class="img-fluid" alt="..."/>
+            <img src={img} className="img-fluid" alt="..."/>
         </div>
     );
 };

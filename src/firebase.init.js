@@ -1,17 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
+import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBEy2DJh-3luPZPDwiZ46dmL0c1-EiO3aw",
-  authDomain: "modern-dental-services.firebaseapp.com",
-  projectId: "modern-dental-services",
-  storageBucket: "modern-dental-services.appspot.com",
-  messagingSenderId: "277434702991",
-  appId: "1:277434702991:web:de280eff0e97802ce024fa"
+  apiKey: "AIzaSyAITsTerdGZ6pznM5JRPN-ChN2Z-FRvbIg",
+  authDomain: "dental-health-service.firebaseapp.com",
+  projectId: "dental-health-service",
+  storageBucket: "dental-health-service.appspot.com",
+  messagingSenderId: "306847398771",
+  appId: "1:306847398771:web:0c58e97463c465f9102306"
 };
 
 // Initialize Firebase
