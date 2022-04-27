@@ -3,21 +3,21 @@
         "id": 1,
         "name": "Dental Filling",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "To treat a cavity your dentist will remove the decayed portion of the tooth and then 'fill' the area on the tooth where the decayed material was removed.",
         "img": "https://i.ibb.co/D5PMSFH/dental-filling.png"
     },
     {
         "id": 2,
         "name": "Dental Implant",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "price": "1000",
+        "description": "A dental implant is an artificial replacement for the root part of a tooth. An implant takes the form of a small metal post which is screw or cylinder shaped and is usually made of titanium.",
         "img": "https://i.ibb.co/CzYrfVV/Dental-implant.png"
     },
     {
         "id": 3,
         "name": "Regular-Checkup",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Your daily efforts of brushing and flossing your teeth aren’t enough. It will only help in preventing plaque buildup in some places. However, infections will continue developing in hidden areas. To prevent such a case from happening, you must visit a competent dentist regularly.",
         "img": "https://i.ibb.co/CsygvDP/regular-checkup.png"
     }
 ]
