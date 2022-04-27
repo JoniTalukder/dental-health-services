@@ -1,16 +1,23 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    let errorMessage;
+
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -18,11 +25,19 @@ const Login = () => {
     const navigateRegister = event => {
         navigate('/register');
     }
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
-    
+
     if (user) {
         navigate(from, { replace: true });
+    }
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+    if (error) {
+        errorMessage = <p className='text-danger'>Error: {error?.message}</p>
     }
     const handleSubmit = event => {
         event.preventDefault();
@@ -30,11 +45,20 @@ const Login = () => {
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password);
     }
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+        toast('Sent email');
+        } else {
+            toast('Please input your email Id');
+        }
+    }
 
 
     return (
         <div className='container w-50 mx-auto '>
-            <h2 className='text-info text-center'>Login Form</h2>
+            <h2 className='text-info text-center'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -46,13 +70,15 @@ const Login = () => {
                 <Button className='d-block mx-auto my-2 w-50' variant="info" type="submit">
                     Login
                 </Button>
-                
+
             </Form>
-            <p>New Dental Health Service? <Link to={'/register'} className='text-info pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> 
+            {errorMessage}
+            <p>New Dental Health Service? <Link to={'/register'} className='text-info pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link>
             </p>
-            <p>Forget Password? <Button variant='link' className='text-info pe-auto text-decoration-none' >Reset Password</Button></p>
-            
-          
+            <p>Forget Password? <Button variant='link' className='text-info pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</Button></p>
+
+            <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };

@@ -4,7 +4,7 @@ import './Services.css';
 
 const Services = () => {
 
-    const [services, setServices] = useData();
+    const [services] = useData();
 
     return (
         <div id='services' className='container'>

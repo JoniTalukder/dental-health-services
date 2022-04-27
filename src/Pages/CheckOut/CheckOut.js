@@ -1,23 +1,21 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import useData from '../../CustomHook/useData';
-import Service from '../Home/Service/Service';
+import { Button } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
+
 
 const CheckOut = () => {
     let { serviceId } = useParams();
     console.log(serviceId);
 
-
-     const [services, setServices] = useData();
     return (
         <div>
             <h2>Check Out:{serviceId}</h2>
-            {
-                    services.map(service => <Service
-                        key={service.id}
-                        service={service}
-                    ></Service>)
-                }
+            <div className='text-center'>
+                <Link to="/thankyou">
+                    <Button variant='info' >Thank You</Button>
+                </Link>
+            </div>
+
         </div>
     );
 };
