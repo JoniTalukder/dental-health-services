@@ -9,7 +9,7 @@ const Services = () => {
 
     return (
         <div id='services' className='container'>
-            <h2 className='text-info text-center text-uppercase mt-5'>Our Services from Dental Health</h2>
+            <h2 className='text-info text-center text-uppercase mt-5'>Our Services from Dental Health best service</h2>
             <div className='row'>
                 {
                     services?.map(service => <Service
